@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import { useContext } from 'react';
+import { StoreContext } from '@/app/context';
 import {
   HomeIcon,
   UserGroupIcon,
@@ -24,6 +27,7 @@ const links = [
   { name: 'Admin', href: '/store/admin', icon: CubeTransparentIcon },
 ];
 const NavLinks = () => {
+  const { cartData } = useContext(StoreContext);
   return (
     <>
       {links.map((link) => {
@@ -36,9 +40,9 @@ const NavLinks = () => {
           >
             <IconComponent className="w-6" />
             <p className="hidden md:block">
-              {/* {link.name === 'Cart' && cartData && cartData.length > 0
+              {link.name === 'Cart' && cartData && cartData.length > 0
                 ? `${link.name}(${cartData.length})`
-                : `${link.name}`} */}
+                : `${link.name}`}
             </p>
           </Link>
         );

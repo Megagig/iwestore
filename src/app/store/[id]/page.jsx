@@ -1,8 +1,9 @@
-import React from 'react';
+import { getBookById } from '@/app/lib/fake-data';
+import BookDetails from '@/app/components/books/BookDetails';
 
 const BookDetailsPage = ({ params: { id } }) => {
-  console.log(id);
-  return <div>Book details Page</div>;
+  const book = getBookById(id);
+  return <BookDetails book={book} />;
 };
 
 export default BookDetailsPage;
