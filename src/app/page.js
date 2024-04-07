@@ -1,6 +1,7 @@
 import backgroundImage from '../../public/home/iwestorehomebg.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { SparklesIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       />
       <div className="flex flex-col justify-center items-center pg-purple-100 rounded-md p-2 lg:w-2/5 h-1/4 z-10">
         <div>
+          <SparklesIcon className="w-12 h-12" />
           <h1 className="text-4xl font-bold text-white-800 text-center">
             Iwestore
           </h1>
